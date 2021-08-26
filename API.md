@@ -18,7 +18,7 @@ _Request Body_
 }
 ```
 
-_Response (200)_
+_Response (200 - OK)_
 
 ```
 {
@@ -27,7 +27,7 @@ _Response (200)_
 }
 ```
 
-_Response (500 - Bad Request)_
+_Response (500 - Internal Server Error)_
 
 ```
 {
@@ -54,7 +54,7 @@ _Request Body_
 }
 ```
 
-_Response (200)_
+_Response (200 - OK)_
 
 ```
 {
@@ -62,7 +62,7 @@ _Response (200)_
 }
 ```
 
-_Response (401 - Unauthorized Login)_
+_Response (401 - Unautorized)_
 
 ```
 {
@@ -71,7 +71,7 @@ _Response (401 - Unauthorized Login)_
 
 ```
 
-_Response (500 - Bad Request)_
+_Response (500 - Internal Server Error)_
 
 ```
 {
@@ -100,7 +100,7 @@ _Request Body_
 }
 ```
 
-_Response (200)_
+_Response (200 - OK)_
 
 ```
 {
@@ -109,7 +109,7 @@ _Response (200)_
 }
 ```
 
-_Response (401 - email already used)_
+_Response (401 - Unautorized)_
 
 ```
 {
@@ -117,7 +117,7 @@ _Response (401 - email already used)_
 }
 ```
 
-_Response (401 - field required)_
+_Response (400 - Bad Request)_
 
 ```
 {
@@ -129,7 +129,7 @@ _Response (401 - field required)_
 }
 ```
 
-_Response (500 - Bad Request)_
+_Response (500 - Internal Server Error)_
 
 ```
 {
@@ -153,7 +153,7 @@ _Request Body_
 not needed
 ```
 
-_Response (200)_
+_Response (200 - OK)_
 
 ```
 [
@@ -223,7 +223,7 @@ _Response (401 - Unauthorized)_
 }
 ```
 
-_Response (401 - Invalid Token)_
+_Response (401 - Unauthorized )_
 
 ```
 {
@@ -231,7 +231,7 @@ _Response (401 - Invalid Token)_
 }
 ```
 
-_Response (500 - Bad Request)_
+_Response (500 - Internal Server Error)_
 
 ```
 {
@@ -255,7 +255,7 @@ _Request Body_
 not needed
 ```
 
-_Response (200)_
+_Response (200 - OK)_
 
 ```
 [
@@ -299,7 +299,7 @@ _Response (200)_
 ]
 ```
 
-_Response (404 - Unauthorized)_
+_Response (404 - Not Found)_
 
 ```
 {
@@ -315,7 +315,7 @@ _Response (401 - Unauthorized)_
 }
 ```
 
-_Response (401 - Invalid Token)_
+_Response (401 - Unauthorized )_
 
 ```
 {
@@ -323,7 +323,7 @@ _Response (401 - Invalid Token)_
 }
 ```
 
-_Response (403 - Forbiden)_
+_Response (403 - Forbidden)_
 
 ```
 {
@@ -331,7 +331,7 @@ _Response (403 - Forbiden)_
 }
 ```
 
-_Response (500 - Bad Request)_
+_Response (500 - Internal Server Error)_
 
 ```
 {
@@ -365,7 +365,7 @@ _Request Body_
 
 ```
 
-_Response (200)_
+_Response (200 - OK)_
 
 ```
 {
@@ -381,11 +381,26 @@ _Response (200)_
     "UserId": 2,
     "createdAt": "2021-08-25T11:26:26.130Z",
     "updatedAt": "2021-08-25T11:26:26.130Z",
-    "User": {
-        "id": 2,
-        "email": "adam@mail.com"
 }
+```
 
+_Response (400 - Bad Request)_
+
+```
+{
+ "message": [
+        "id cannot be null",
+        "url cannot be null",
+        "image_url cannot be null",
+        "title cannot be null",
+        "episodes cannot be null",
+        "rated cannot be null",
+        "userpoin cannot be null",
+        "review cannot be null",
+        "recomendation cannot be null",
+        "UserId cannot be null",
+    ]
+}
 
 ```
 
@@ -397,7 +412,7 @@ _Response (401 - Unauthorized)_
 }
 ```
 
-_Response (401 - Invalid Token)_
+_Response (401 - Unauthorized )_
 
 ```
 {
@@ -405,7 +420,7 @@ _Response (401 - Invalid Token)_
 }
 ```
 
-_Response (500 - Bad Request)_
+_Response (500 - Internal Server Error)_
 
 ```
 {
@@ -434,7 +449,7 @@ _Request Body_
 
 ```
 
-_Response (200)_
+_Response (200 - OK)_
 
 ```
 {
@@ -455,7 +470,7 @@ _Response (200)_
 
 ```
 
-_Response (404 - Unauthorized)_
+_Response (404 - Not Found)_
 
 ```
 {
@@ -471,7 +486,7 @@ _Response (401 - Unauthorized)_
 }
 ```
 
-_Response (401 - Invalid Token)_
+_Response (401 - Unauthorized )_
 
 ```
 {
@@ -479,7 +494,7 @@ _Response (401 - Invalid Token)_
 }
 ```
 
-_Response (403 - Forbiden)_
+_Response (403 - Forbidden)_
 
 ```
 {
@@ -487,7 +502,7 @@ _Response (403 - Forbiden)_
 }
 ```
 
-_Response (500 - Bad Request)_
+_Response (500 - Internal Server Error)_
 
 ```
 {
@@ -512,7 +527,7 @@ not needed
 
 ```
 
-_Response (200)_
+_Response (200 - OK)_
 
 ```
 {
@@ -522,7 +537,7 @@ _Response (200)_
 
 ```
 
-_Response (404 - Unauthorized)_
+_Response (404 - Not Found)_
 
 ```
 {
@@ -538,7 +553,7 @@ _Response (401 - Unauthorized)_
 }
 ```
 
-_Response (401 - Invalid Token)_
+_Response (401 - Unauthorized )_
 
 ```
 {
@@ -546,7 +561,7 @@ _Response (401 - Invalid Token)_
 }
 ```
 
-_Response (403 - Forbiden)_
+_Response (403 - Forbidden)_
 
 ```
 {
@@ -554,7 +569,7 @@ _Response (403 - Forbiden)_
 }
 ```
 
-_Response (500 - Bad Request)_
+_Response (500 - Internal Server Error)_
 
 ```
 {
